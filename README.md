@@ -125,7 +125,7 @@ ash (Almquist shell — POSIX-compliant, lightweight)
 
 💡 Tip: Some GNU command options may not exist in BusyBox.
 
-### System Administration with BusyBox :
+#### System Administration with Busybox :
 
 ```bash
 # Configure networking
@@ -145,7 +145,7 @@ logread
 
 ```
 
-####  BusyBox Init System :
+####  Busybox Init System :
 
 BusyBox provides a minimal init system.
 
@@ -160,5 +160,45 @@ Example /etc/inittab snippet:
 ::sysinit:/etc/init.d/rcS
 tty1::respawn:/bin/ash
 ::ctrlaltdel:/sbin/reboot
+
+```
+
+#### Networking & Security :
+
+##### Basic static IP setup
+
+```bash
+ifconfig eth0 192.168.1.50 netmask 255.255.255.0 up
+route add default gw 192.168.1.1
+```
+
+##### DHCP client:
+
+```bash
+udhcpc -i eth0
+```
+
+##### Basic firewall
+
+```bash
+iptables -A INPUT -p tcp --dport 22 -j ACCEPT
+```
+
+#### Troubleshooting in BusyBox :
+
+##### Common tools:
+
+```bash
+ps            # Check running processes
+top           # Live CPU/memory usage
+df -h         # Disk usage
+free -m       # Memory usage
+netstat -tuln # Network sockets
+```
+
+##### Remount root read/write :
+
+```bash
+mount -o remount,rw /
 
 ```
