@@ -1,5 +1,11 @@
 ## BusyBox Linux Learning Guide for System administrator job :
 
+</p>
+<p align="center">
+<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/sysadmin.jpg" width="500">
+</p>
+
+
 ### 📌 Overview
 BusyBox is a lightweight collection of common Unix/Linux utilities combined into a single binary.
 
@@ -234,6 +240,11 @@ mount -o remount,rw /
 ---
 
 ### Preparation for practical test :
+
+</p>
+<p align="center">
+<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/linux.jpg" width="500">
+</p>
 
 #### Linux Administration :
 
