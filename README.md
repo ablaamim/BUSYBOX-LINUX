@@ -230,3 +230,101 @@ netstat -tuln # Network sockets
 mount -o remount,rw /
 
 ```
+
+---
+
+### Preparation for practical test :
+
+#### Linux Administration :
+
+> Linux Directory Structure
+
+ 8 'must know' directories!
+
+* / => "root" (or, just slash) is the top level of the file system hierarchy.
+* /bin => Contains binaries or executable programs.
+* /etc => System Configuration Files
+* /home => Home Directories (of the users on the system)
+* /opt => Optional or Third Party Software.
+* /tmp => Temporary space, usually cleared on reboot(DONT have important stuff that you want to SAVE)
+* /usr => User related programs.
+* /var => Variable Data, most notable being the log files (system log files.)
+
+#### Users and groups :
+
+> Here's an example: When you make a new user named "Abdessa,ad " with this command:
+
+```bash
+$ sudo useradd --create-home bob
+```
+
+> Linux automatically makes a primary group also called 
+"Abdessamad". Check this in the /etc/passwd file:
+
+```bash
+$ grep bob /etc/passwd
+```
+
+> This command shows Abdessamad's User ID (UID) and Group ID (GID), confirming his main group.
+
+?  Add to groups (e.g., docker, wheel/sudo)
+
+```bash
+sudo usermod -aG sudo Abdessamad        # Debian/Ubuntu
+sudo usermod -aG wheel Abdessamad       # RHEL/Rocky
+```
+
+#### Sudoers and privilleges :
+
+```bash
+# Always use visudo for syntax check
+sudo visudo
+
+# Example: allow 'deploy' to run only systemctl without password
+deploy ALL=(ALL) NOPASSWD: /bin/systemctl
+
+# Per-command specificity (safer)
+deploy ALL=(root) NOPASSWD: /bin/systemctl restart nginx, /bin/systemctl status nginx
+```
+
+#### Processes and job control
+
+> Creating and viewing processs, background vs foreground processes, killing a process, etc.
+
+Displaying process information
+ps => Display Process Status.(No arguments? Displays ps for all processes associated with current session)
+Options for ps
+ps
+
+-e => Everything, all processes(NOT just limited to your session).
+-f => Full format listing.
+-u username => Display username's processes only. (Ex: ps -fu joehenderson)
+-p pid => Display information for process with PID 'pid'.
+The full listing -f contains:
+
+UID (User ID),
+PID (Process ID),
+PPID (Parent Process ID),
+Time , 5. Process/Command Name ... etc
+One of the main reasons for running ps is to get the Process ID (PID)
+
+NOTE:: PID != JOB NUMBER
+
+Common ps commands:
+
+ps -e => Display all processes.
+ps -ef => Display all processes, full listing.
+ps -eH => Display a process tree. (IMPORTANT)
+ps -e --forest => Display a process tree. (IMPORTANT)
+ps -u username => Display user's processes.
+Other common commands:
+
+pstree => Display processes in tree format.
+top => Interactive process viewer. (Press 'q' to exit, '?' for help)
+htop => Interactive process viewer. (Less popular, may not be available by default on the system)
+The top command places the processes using most of the CPU and Memory resources at the TOP of the list. It also displays the CPU and Memory usage columns.
+
+Killing a currently running foreground process
+Press CTRL+C on the CLI while the process is running. (Pressing this kills the foreground process and return the shell prompt to the user)
+Suspend a foreground process
+Press CTRL+Z to suspend a foreground process.
