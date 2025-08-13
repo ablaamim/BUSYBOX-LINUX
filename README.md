@@ -42,6 +42,34 @@ BusyBox was created in 1996 by Bruce Perens as part of the Debian GNU/Linux inst
 
 * Stealth: BusyBox can be statically compiled and dropped onto a target for post-exploitation, giving you a full set of tools even on stripped-down systems.
 
+#### Where BusyBox is Used ?
+
+| Domain | Examples / Usage |
+|--- |--- |
+| Embedded Systems	 |  Used in router firmware, smart TVs, automotive infotainment, and industrial control systems. Brands: Linksys, Netgear, D-Link. |
+| Container Environments | Alpine Linux (used in Docker containers) uses BusyBox as the default CLI toolkit to reduce image size and resource usage. |
+| IoT Devices | Incorporated into low-power Internet of Things devices to provide essential system functions with minimal resource usage. |
+| Incorporated into low-power Internet of Things devices to provide essential system functions with minimal resource usage. | Used in Linux rescue disks and recovery tools to offer a full Unix environment in limited space. Continues the legacy from the Debian installer. |
+
+#### How BusyBox Works ?
+
+* One file contains many commands (called "applets").
+
+* Commands are usually links to the BusyBox file.
+
+* Can be static (works without other files) or dynamic (needs libraries).
+
+#### File System Layout
+
+```bash
+/bin   -> Commands linked to busybox
+/sbin  -> More commands
+/etc   -> Config files
+/proc  -> Kernel info
+/tmp   -> Temporary files
+
+```
+
 ### Setting Up a Practice Environment :
 
 - Run a docker busybox image to Practice and experiment.
