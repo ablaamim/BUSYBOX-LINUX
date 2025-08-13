@@ -11,7 +11,7 @@ For this role, **BusyBox Linux knowledge is mandatory** — meaning i must be ab
 
 ### What is BusyBox ?
 
-- **Definition**: 
+- **Definition** : 
 
 BusyBox is a lightweight software suite that combines many common Unix utilities into a single small executable file. Often dubbed “The Swiss Army Knife of Embedded Linux,” BusyBox provides a compact implementation of numerous standard command-line tools that are essential for Unix-like operating systems.
 
@@ -27,8 +27,20 @@ BusyBox was created in 1996 by Bruce Perens as part of the Debian GNU/Linux inst
 
 </p>
 <p align="center">
-<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/floppy_disk.jpg" width="800">
+<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/floppy_disk.jpg" width="500">
 </p>
+
+#### Why Hackers Should Care?
+
+#### Why hackers care about busybox?
+
+* Portability: BusyBox works on almost any Linux or Unix-like system.
+
+* Minimal Footprint: Perfect for custom hacking distros, bootable USBs, or CTFs.
+
+* Essential for Embedded Targets: Many IoT devices and routers run BusyBox by default—knowing it helps you exploit or secure them.
+
+* Stealth: BusyBox can be statically compiled and dropped onto a target for post-exploitation, giving you a full set of tools even on stripped-down systems.
 
 ### Setting Up a Practice Environment :
 
@@ -43,7 +55,8 @@ Digest: sha256:f9a104fddb33220ec80fc45a4e606c74aadf1ef7a3832eb0b05be9e90cd61f5f
 Status: Downloaded newer image for busybox:latest
 ```
 
-- Test Busybox commend :
+- Test Busybox command 'busybox' :
+
 ```bash
 / # busybox
 BusyBox v1.37.0 (2024-09-26 21:31:42 UTC) multi-call binary.
