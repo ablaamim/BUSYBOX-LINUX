@@ -267,6 +267,25 @@ mount -o remount,rw /
 * /usr => User related programs.
 * /var => Variable Data, most notable being the log files (system log files.)
 
+#### How to find help ?
+
+* when you are all by the black screen, you're only left by the MAN pages.
+
+-> Sections :
+
+> man section 1 (COmmands and applications)
+> man section 2 (System calls)
+> man section 3 (library calls)
+> man section 4 (drivers)
+> man section 5 (files)
+
+-> look for a keyword in all manuals :
+
+```bash
+man -k
+```
+
+
 > System snapshot
 
 ```bash
@@ -345,19 +364,24 @@ NOTE:: PID != JOB NUMBER
 
 Common ps commands:
 
+```bash
 ps -e => Display all processes.
 ps -ef => Display all processes, full listing.
 ps -eH => Display a process tree. (IMPORTANT)
 ps -e --forest => Display a process tree. (IMPORTANT)
 ps -u username => Display user's processes.
+```
+
 Other common commands:
 
+```bash
 pstree => Display processes in tree format.
 top => Interactive process viewer. (Press 'q' to exit, '?' for help)
 htop => Interactive process viewer. (Less popular, may not be available by default on the system)
 The top command places the processes using most of the CPU and Memory resources at the TOP of the list. It also displays the CPU and Memory usage columns.
+```
 
-Killing a currently running foreground process
-Press CTRL+C on the CLI while the process is running. (Pressing this kills the foreground process and return the shell prompt to the user)
-Suspend a foreground process
-Press CTRL+Z to suspend a foreground process.
+#### Killing a currently running foreground process :
+
+> Press CTRL+C on the CLI while the process is running. (Pressing this kills the foreground process and return the shell prompt to the user)
+> Suspend a foreground process : Press CTRL+Z to suspend a foreground process.

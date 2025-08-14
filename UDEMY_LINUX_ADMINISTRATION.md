@@ -20,21 +20,4 @@
 
 ---
 
-### How to find help ?
-
-* when you are all by the black screen, you're only left by the MAN pages.
-
--> Sections :
-
-> man section 1 (COmmands and applications)
-> man section 2 (System calls)
-> man section 3 (library calls)
-> man section 4 (drivers)
-> man section 5 (files)
-
--> look for a keyword in all manuals :
-
-```bash
-man -k
-```
 
