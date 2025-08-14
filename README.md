@@ -1,19 +1,21 @@
 ## BusyBox Linux Learning Guide for System administrator job :
 
+---
+
 </p>
 <p align="center">
 <img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/sysadmin.jpg" width="500">
 </p>
 
+---
 
 ### 📌 Overview
+
 BusyBox is a lightweight collection of common Unix/Linux utilities combined into a single binary.
 
 It’s widely used in **embedded systems**, **rescue shells**, and **minimal Linux distributions** like Alpine.
 
 For this role, **BusyBox Linux knowledge is mandatory** — meaning i must be able to perform system administration, troubleshooting, and networking tasks in a BusyBox-only environment.
-
----
 
 ### What is BusyBox ?
 
@@ -31,10 +33,14 @@ Official site for documentation : https://busybox.net
 
 BusyBox was created in 1996 by Bruce Perens as part of the Debian GNU/Linux installer. The original motivation was to create a rescue disk that could fit on a single floppy disk while still providing essential Unix tools.
 
+---
+
 </p>
 <p align="center">
 <img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/floppy_disk.jpg" width="500">
 </p>
+
+---
 
 #### Why Hackers Should Care?
 
@@ -243,7 +249,7 @@ mount -o remount,rw /
 
 </p>
 <p align="center">
-<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/linux`.jpg" width="500">
+<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/linux.jpg" width="500">
 </p>
 
 #### Linux Administration :
