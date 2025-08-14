@@ -243,7 +243,7 @@ mount -o remount,rw /
 
 </p>
 <p align="center">
-<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/linux.jpg" width="500">
+<img src="https://github.com/ablaamim/BUSYBOX-LINUX/blob/main/imgs/linux`.jpg" width="500">
 </p>
 
 #### Linux Administration :
@@ -261,12 +261,28 @@ mount -o remount,rw /
 * /usr => User related programs.
 * /var => Variable Data, most notable being the log files (system log files.)
 
+> System snapshot
+
+```bash
+hostnamectl
+whoami; id
+uname -r && cat /etc/os-release
+uptime
+```
+
+> Archive & compress:
+
+```bash
+tar -czf ~/lab-data.tgz -C ~/ lab
+tar -tzf ~/lab-data.tgz | head
+```
+
 #### Users and groups :
 
 > Here's an example: When you make a new user named "Abdessa,ad " with this command:
 
 ```bash
-$ sudo useradd --create-home bob
+$ sudo useradd --create-home abdessamad
 ```
 
 > Linux automatically makes a primary group also called 
